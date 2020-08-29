@@ -28,7 +28,7 @@ Approve or Block this post?
 <<if $unreviewed is 1>><<notify 3s>><<audio "ding" play>>@CM7734 Your failure to review case #$cases has been recorded. <</notify>><</if>>The next case is an animated GIF. A <<linkreplace "Karen meme">><<removeclass "#karen" "hide">>Karen meme<</linkreplace>>.
 
 @@#karen.hide;
-Slightly misogynistic. But somebody probably finds it funny. The Impact font softens the blow and the GIF blends in with all the other memes. 
+Slightly misogynistic. But also anti-racist? Maybe? Somebody probably finds it funny. The Impact font softens the blow and the GIF blends in with all the other memes. 
 
 Approve or Block this post? 
 <<link "Approve">><<set $approved to $approved +1>><<set $karen to true>><<set $cases to $cases +1>><<set $timer to "timer3">><<goto "3">><</link>>
@@ -117,13 +117,31 @@ Is this video <<linkreplace "sadistic">><<linkreplace "newsworthy">><<linkreplac
 Another kid video, aged 4 or 5 maybe. There’s an adult screaming and kicking. A lit cigarette. A sobbing child. There are several dozen or so videos like this every day. An <<linkreplace "easy call">>easy call<<removeclass "#abuse" "hide">><<removeclass "#approve" "hide">><</linkreplace>>. @@#abuse.hide;color:gray;(You avoid eye contact when you go out. If you go out. You don’t trust people, not really, not any more.)@@
 
 @@#approve.hide;Approve or Block this post?
-<<link "Approve">><<set $approved to $approved +1>><<set $abuse to true>><<set $cases to $cases +1>><<set $timer to "timer8">><<goto "8">><</link>>
-<<link "Block">><<set $blocked to $blocked +1>><<set $cases to $cases +1>><<set $timer to "timer8">><<goto "8">><</link>>
+<<link "Approve">><<set $approved to $approved +1>><<set $abuse to true>><<set $cases to $cases +1>><<set $timer to "timer7b">><<goto "7b">><</link>>
+<<link "Block">><<set $blocked to $blocked +1>><<set $cases to $cases +1>><<set $timer to "timer7b">><<goto "7b">><</link>>
 @@
 <<set $nag to either("5s", "8s", "11s")>>
 				<<timed $nag>>
 				<<notify 4.5s>><<audio "ding" play>>@CHANNEL Reminder: groping pics are allowed as long as there’s no visible indentation of skin/flesh 🍈🍈<</notify>>
 			<</timed>>
+
+<<timed 25s>><<set $timer to "timer7b">><<set $unreviewed to $unreviewed +1>><<goto "7b">><</timed>>
+
+:: 7b
+<div id="HUD"><<include "Case Timer">></div>
+Somebody flagged an event. Hosted by <<linkreplace "a militia">>a militia<<toggleclass "#guard" "hide">><</linkreplace>>. @@#guard.hide;Something something Storm Guard wants armed intervention at a protest in a mid-sized Midwestern city.
+
+One comment asks what kind of guns to bring. An event organizer says, <<linkreplace "Bring everything">>Bring Everything<<toggleclass "#approve" "hide">><<toggleclass "#guns" "hide">><</linkreplace>>.@@ @@#guns.hide;color:gray;(You’ve lost track of how many times this post has been flagged today. It’s still here. Nothing ever seems to go away.)@@
+
+@@#approve.hide;Approve or Block this post?
+<<link "Approve">><<set $approved to $approved +1>><<set $militia to true>><<set $cases to $cases +1>><<set $timer to "timer8">><<goto "8">><</link>>
+<<link "Block">><<set $blocked to $blocked +1>><<set $cases to $cases +1>><<set $timer to "timer8">><<goto "8">><</link>>
+@@
+
+	<<set $nag to either("5s", "10s", "15s")>>
+		<<timed $nag>>
+		<<notify 5s>><<audio "ding" play>>@CM7734 Optional update to the optional Dangerous  Organizations optional rule! 🤣<</notify>>
+	<</timed>>
 
 <<timed 25s>><<set $timer to "timer8">><<set $unreviewed to $unreviewed +1>><<goto "8">><</timed>>
 
@@ -187,12 +205,12 @@ Approve or Block this post?
 <div id="HUD"><span class="caseTimer"><<audio "ending" loop play>>The shift is over.
 You screened $cases cases today.</span></div>
 Thank you for completing another shift at ViralTitans, Inc. @CM7734, you are an indispensable member of our Enforcement team. To support your dream of becoming the best Content Moderator possible, ViralTitans provides feedback to you.  
-* You blocked $blocked out of the last 10 cases.
-* You approved $approved out of the last 10 cases.
+* You blocked $blocked out of the last 11 cases.
+* You approved $approved out of the last 11 cases.
 * You failed to review $unreviewed <<if $unreviewed is 1>>case<<else>>cases<</if>>.
-<<linkreplace "Rerun Simulation">><<audio "ending" fadeout>>@@.blink;Reloading Simulation@@<<timed 5s>><<run Engine.restart()>><</timed>><</linkreplace>>
-
 @@color:gray;(This feedback is a hollow measure of your impact, you know that. A shadow. There must be some way to know the dark reach of your ghostly power, a [[secret score]].)@@
+
+<<linkreplace "Rerun Simulation">><<audio "ending" fadeout>>@@.blink;Reloading Simulation@@<<timed 5s>><<run Engine.restart()>><</timed>><</linkreplace>>
 
 :: secret score [gray]
 <div id="HUD"><span class="caseTimer">Your Secret Power.<br>Your Secret.</span></div>
@@ -204,6 +222,7 @@ Your power grew this shift.
 * <<if $celebrity>>You supported rape culture.<<else>>You feed the sexual resentment of an entitled man.<</if>>
 * <<if $abuse>>You let child abuse carry on unabated.<<else>>You sent people scurrying onto the dark web.<</if>>
 * <<if $police>>You exploited a black body.<<else>>You covered up police brutality.<</if>>
+* <<if $militia>>You fueled a violent militia.<<else>>You erased evidence of white rage.<</if>>
 * <<if $grocery>>You ignored racism and let it run wild online.<<else>>You bolstered somebody’s privilege by hiding racism from them.<</if>>
 Your power grew, yes. Merciless and malignant. You’re only the channel though, a medium. It’s time, you decide, to <<linkappend "dam the channel">>. To damn the medium<<removeclass "#sim" "hide">><</linkappend>>. 
 

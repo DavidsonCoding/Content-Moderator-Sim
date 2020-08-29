@@ -46,6 +46,11 @@ Content Moderation Sim
     <<animation 25s linear>>
 <</newmeter>>
 
+<<newmeter 'timer7b' 0>>
+    <<colors '#900' '#898F9C'>>
+    <<animation 25s linear>>
+<</newmeter>>
+
 <<newmeter 'timer8' 0>>
     <<colors '#900' '#898F9C'>>
     <<animation 25s linear>>
@@ -79,6 +84,7 @@ Content Moderation Sim
 <<set $celebrity to false>>
 <<set $abuse to false>>
 <<set $police to false>>
+<<set $militia to false>>
 <<set $grocery to false>>
 <<set $horror to false>>
 

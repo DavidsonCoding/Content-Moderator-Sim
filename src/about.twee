@@ -34,13 +34,13 @@ Brief written references to abuse, self-harm, racism, and brutality, but no imag
 :: Credits
 !!Credits
 * This game is informed by Sara Roberts’ ethnographic research into online content moderation. Check out this //New Yorker// [[interview with Roberts->https://www.newyorker.com/news/q-and-a/the-underworld-of-online-content-moderation]] for more background. Real world content moderation system are more complicated than what is presented in this simulation. Roberts provides greater detail in her book //[[Behind the Screen->https://yalebooks.yale.edu/book/9780300235883/behind-screen]]// (2019).
-* Many of the <q>cases</q> are derived from real examples detailed in this //Guardian// report on [[content moderation at Facebook->https://www.theguardian.com/news/2017/may/21/revealed-facebook-internal-rulebook-sex-terrorism-violence]].  
+* Many of the <q>cases</q> are derived from real examples detailed in this //Guardian// report on [[content moderation at Facebook->https://www.theguardian.com/news/2017/may/21/revealed-facebook-internal-rulebook-sex-terrorism-violence]]. The August 2020 release includes a new incident detailed by [[Buzzfeed News->https://www.buzzfeednews.com/article/ryanmac/kenosha-militia-facebook-reported-455-times-moderators]]. 
 * Custom Twine macros courtesy of [[Chapel->https://twinelab.net/custom-macros-for-sugarcube-2/#/]].
 * [[Ears ringing->https://freesound.org/people/hykenfreak/sounds/218050/]] and [[panicked breathing->https://freesound.org/people/giddster/sounds/336530/]] audio clips from Freesound
 * The closing song is <q>The Temperature of the Air on the Bow of the Kaleetan</q> by [[Chris Zabriskie->https://chriszabriskie.bandcamp.com/album/undercover-vampire-policeman]]
 * Cover [[thumb up image->https://thenounproject.com/icon/1939579/]] courtesy of the Noun Project
 * Written and designed by [[Mark Sample->https://www.samplereality.com]] in Twine
-
+\
 :: Post-About
 !About Content Moderator Sim
 <<include "Credits">>
