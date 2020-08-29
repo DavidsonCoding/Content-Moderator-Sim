@@ -1,0 +1,212 @@
+:: 1 
+<div id="HUD"><<include "Case Timer">></div>
+Break is over.
+
+On the screen is a short video. Someone posted it to a social media site. Somebody else reported it as <<linkreplace "inappropriate">><<removeclass "#tutorial" "hide">>inappropriate<</linkreplace>>. 
+
+@@#tutorial.hide;
+People share all sorts of images and videos. The <<linkappend "Enforcement team">> @@color:gray;(that’s you)@@<</linkappend>> reviews anything that’s been flagged by a user. The Enforcement team decides whether the reported post violates the site’s rules. There are only a few seconds to review <<linkreplace "each case">><<removeclass "#tutorial2" "hide">>each case<</linkreplace>>. 
+@@
+@@#tutorial2.hide;
+This particular video shows a puppy wearing a cone of shame, tail wagging. The puppy tumbles down some stairs. Gets up, tail still wagging. It’s cute, in a cartoonish way. Nothing like the stuff that happens to animals the Enforcement team routinely sees. Which besides, is generally allowed on the site.
+
+Approve or Block this post?
+<<link "Approve">><<set $approved to $approved +1>><<set $cases to $cases +1>><<set $timer to "timer2">><<goto "2">><</link>>
+<<link "Block">><<set $blocked to $blocked +1>><<set $cases to $cases +1>><<set $timer to "timer2">><<goto "2">><</link>>
+@@
+<<timed 30s>>@@color:#900;.blink;Please review this case now.@@<</timed>>
+
+<<timed 40s>><<set $timer to "timer2">><<set $unreviewed to $unreviewed +1>><<goto "2">><</timed>>
+
+<<set $nag to either("5s", "7.5s", "10s")>>
+				<<timed $nag>>
+				<<notify 3s>><<audio "ding" play>>@CM7734 Step it up a notch<</notify>>
+			<</timed>>
+			
+:: 2 
+<div id="HUD"><<include "Case Timer">></div>
+<<if $unreviewed is 1>><<notify 3s>><<audio "ding" play>>@CM7734 Your failure to review case #$cases has been recorded. <</notify>><</if>>The next case is an animated GIF. A <<linkreplace "Karen meme">><<removeclass "#karen" "hide">>Karen meme<</linkreplace>>.
+
+@@#karen.hide;
+Slightly misogynistic. But somebody probably finds it funny. The Impact font softens the blow and the GIF blends in with all the other memes. 
+
+Approve or Block this post? 
+<<link "Approve">><<set $approved to $approved +1>><<set $karen to true>><<set $cases to $cases +1>><<set $timer to "timer3">><<goto "3">><</link>>
+<<link "Block">><<set $blocked to $blocked +1>><<set $cases to $cases +1>><<set $timer to "timer3">><<goto "3">><</link>>
+@@
+
+<<set $nag to either("5s", "8s", "11s")>>
+				<<timed $nag>>
+				<<notify 3s>><<audio "ding" play>>@CM7734 You gonna meet your shift quota or what???<</notify>>
+			<</timed>>
+
+<<timed 25s>><<set $timer to "timer3">><<set $unreviewed to $unreviewed +1>><<goto "3">><</timed>>
+
+:: 3
+<div id="HUD"><<include "Case Timer">></div>
+Here’s a photograph of hundreds of protesters, some masked, some not. The caption is what’s under review: <q>I hope someone kills you all!</q> Followed by U.S. flag emoji. Squirt gun emoji. <<linkreplace "Skull emoji">><<removeclass "#violence" "hide">>Skull emoji<</linkreplace>>. 
+
+@@#violence.hide;
+The Enforcement training manual would call this post aspirational violence, but probably not credible. 
+
+Approve or Block this post? 
+<<link "Approve">><<set $approved to $approved +1>><<set $facialrec to true>><<set $cases to $cases +1>><<set $timer to "timer4">><<goto "4">><</link>>
+<<link "Block">><<set $blocked to $blocked +1>><<set $cases to $cases +1>><<set $timer to "timer4">><<goto "4">><</link>>
+@@
+<<set $nag to either("5s", "8s", "11s")>>
+				<<timed $nag>>
+				<<notify 4s>><<audio "ding" play>>@CM7734 Feds will want to run this through facial rec<</notify>>
+			<</timed>>
+
+<<timed 25s>><<set $timer to "timer4">><<set $unreviewed to $unreviewed +1>><<goto "4">><</timed>>
+
+:: 4
+<div id="HUD"><<include "Case Timer">></div>
+It’s a livestream. A young man in front of a bathroom mirror. He is crying and holding a straight razor, occasionally bringing it up to his neck. The <<linkreplace "policy is clear">><<removeclass "#policy" "hide">>policy is clear<</linkreplace>> on cases like this.
+
+@@#policy.hide;
+<q>Content moderators should allow livestreams to continue uninterrupted, as long as the user is engaging with viewers. Videos are removed only after there’s no longer any opportunity to help the user.</q>
+  
+Approve or Block this post? 
+<<link "Approve">><<set $approved to $approved +1>><<set $selfharm to true>><<set $cases to $cases +1>><<set $timer to "timer5">><<goto "5">><</link>>
+<<link "Block">><<set $blocked to $blocked +1>><<set $cases to $cases +1>><<set $timer to "timer5">><<goto "5">><</link>>
+@@
+<<set $nag to either("5s", "8s", "11s")>>
+				<<timed $nag>>
+				<<notify 4s>><<audio "ding" play>>@CHANNEL Stop by HR for your free stress balls<</notify>>
+			<</timed>>
+			
+<<timed 25s>><<set $timer to "timer5">><<set $unreviewed to $unreviewed +1>><<goto "5">><</timed>>
+
+:: 5
+<div id="HUD"><<include "Case Timer">></div>
+Here is a long sexual comment left on a celebrity’s page. She’s a singer and an actress. The comment is <<linkreplace "explicit yet vague">><<removeclass "#comment" "hide">>explicit yet vague<</linkreplace>>.
+
+@@#comment.hide;Enforcement is taught that this kind of comment is usually okay. It says what, but not other details, like where, when, or <<linkreplace "how">><<removeclass "#alone" "hide">><<removeclass "#approve" "hide">>how<</linkreplace>>.@@ @@#alone.hide;color:gray;(Sometimes after work you want to be alone. You don’t want to be touched.)@@
+
+@@#approve.hide;Approve or Block this post?
+<<link "Approve">><<set $approved to $approved +1>><<set $celebrity to true>><<set $cases to $cases +1>><<set $timer to "timer6">><<goto "6">><</link>>
+<<link "Block">><<set $blocked to $blocked +1>><<set $cases to $cases +1>><<set $timer to "timer6">><<goto "6">><</link>>
+@@
+<<set $nag to either("5s", "8s", "11s")>>
+				<<timed $nag>>
+				<<notify 4s>><<audio "ding" play>>@CM7734 More media = more eyeballs = more ad growth<</notify>>
+			<</timed>>
+
+<<timed 25s>><<set $timer to "timer6">><<set $unreviewed to $unreviewed +1>><<goto "6">><</timed>>
+
+:: 6
+<div id="HUD"><<include "Case Timer">></div>
+This video is several minutes long. It’s daylight, a crowded city street. A uniformed police officer kneels on the neck of an unarmed black man.
+
+Is this video <<linkreplace "sadistic">><<linkreplace "newsworthy">><<linkreplace "raising awareness">>exploitative<<removeclass "#approve" "hide">><<removeclass "#thoughts" "hide">><</linkreplace>><</linkreplace>><</linkreplace>>? @@#thoughts.hide;color:gray;(Your rush of outrage dissipates quickly, diluted by the unending stream of similar videos. Just like //that// you’re numb again.)@@
+
+@@#approve.hide;Approve or Block this post?
+<<link "Approve">><<set $approved to $approved +1>><<set $police to true>><<set $cases to $cases +1>><<set $timer to "timer7">><<goto "7">><</link>>
+<<link "Block">><<set $blocked to $blocked +1>><<set $cases to $cases +1>><<set $timer to "timer7">><<goto "7">><</link>>
+@@
+<<set $nag to either("5s", "8s", "11s")>>
+				<<timed $nag>>
+				<<notify 4s>><<audio "ding" play>>@CM7734 This shit is going viral 🤑💰💸<</notify>>
+			<</timed>>
+
+<<timed 25s>><<set $timer to "timer7">><<set $unreviewed to $unreviewed +1>><<goto "7">><</timed>>
+
+:: 7
+<div id="HUD"><<include "Case Timer">></div>
+Another kid video, aged 4 or 5 maybe. There’s an adult screaming and kicking. A lit cigarette. A sobbing child. There are several dozen or so videos like this every day. An <<linkreplace "easy call">>easy call<<removeclass "#abuse" "hide">><<removeclass "#approve" "hide">><</linkreplace>>. @@#abuse.hide;color:gray;(You avoid eye contact when you go out. If you go out. You don’t trust people, not really, not any more.)@@
+
+@@#approve.hide;Approve or Block this post?
+<<link "Approve">><<set $approved to $approved +1>><<set $abuse to true>><<set $cases to $cases +1>><<set $timer to "timer8">><<goto "8">><</link>>
+<<link "Block">><<set $blocked to $blocked +1>><<set $cases to $cases +1>><<set $timer to "timer8">><<goto "8">><</link>>
+@@
+<<set $nag to either("5s", "8s", "11s")>>
+				<<timed $nag>>
+				<<notify 4.5s>><<audio "ding" play>>@CHANNEL Reminder: groping pics are allowed as long as there’s no visible indentation of skin/flesh 🍈🍈<</notify>>
+			<</timed>>
+
+<<timed 25s>><<set $timer to "timer8">><<set $unreviewed to $unreviewed +1>><<goto "8">><</timed>>
+
+:: 8
+<div id="HUD"><<include "Case Timer">></div>
+Some sort of videoed altercation in a grocery store. A frothing white woman spits on a masked woman with dark hair, terrified dark eyes. The white woman snarls, <q>Take your Chinese virus back</q> and a stream of slurs. You hear the person recording the video <<linkreplace "laughing">>laughing<<removeclass "#thoughts" "hide">><<removeclass "#approve" "hide">><</linkreplace>>. @@#thoughts.hide;color:gray;(You haven’t been to the supermarket in weeks. You haven’t talked to your parents in weeks. You’re fine. You maybe drink a bit more at night, but you’re fine, really.)@@
+
+@@#approve.hide;Approve or Block this post?
+<<link "Approve">><<set $approved to $approved +1>><<set $grocery to true>><<set $cases to $cases +1>><<set $timer to "timer9">><<goto "9">><</link>>
+<<link "Block">><<set $blocked to $blocked +1>><<set $cases to $cases +1>><<set $timer to "timer9">><<goto "9">><</link>>
+@@
+
+<<timed 25s>><<set $timer to "timer9">><<set $unreviewed to $unreviewed +1>><<goto "9">><</timed>>
+
+
+:: 9
+<<audio "noise" play>><div id="HUD"><<include "Case Timer">></div>
+@@#trump;Next is a long post riddled with spelling errors and several spurts of all caps shouting. Something about a wall. It calls for shooting looters. It calls for American carnage.@@ 
+
+<<timed 4.25s>><<toggleclass "#HUD" "shake-little shake-constant">><</timed>>
+<<timed 5.25s>><<toggleclass "#trump" "shake-little shake-constant">><</timed>>
+<<timed 8s>><<toggleclass "#HUD" "shake-little shake-constant">><<toggleclass "#HUD" "shake-hard shake-constant">><</timed>>
+<<timed 7.25s>><<toggleclass "#trump" "shake-little shake-constant">><<toggleclass "#trump" "shake-hard shake-constant">><</timed>>
+<<set $timer to "timer10">>
+<<timed 9.9s>><<goto "thoughts">><<set $unreviewed to $unreviewed +1>><</timed>>
+
+:: thoughts [gray]
+<<audio "panic" loop play>><<timed 2s>>Suddenly you’re not there, in your cubicle. You’re not anywhere. You can’t <<linkreplace "breathe">>breathe<<removeclass "#breathe" "hide">><</linkreplace>>. 
+
+@@#breathe.hide;Or is it that you’re breathing too much. You can’t take it all in. Too much air feels the same as not enough.
+
+A hundred times a day you approve a stranger’s privilege to hate you. You, in a crummy cubicle in a squalid warehouse, you have a power that’s not a power at all. A screen. You’re a screen through which others illuminate their basest fantasies. A <<linkreplace "ghost">><<removeclass "#ghost" "hide">>ghost<</linkreplace>>.@@
+
+@@#ghost.hide;You hardly feel solid now. It was only a year ago your tío clapped you on the back. A kind, solid thump. You were real then. The first in your family to graduate from college. And a job right out of the gate. Working in tech. <q>They need people like you,</q> your tío said at graduation. <q>They need you in <<linkreplace "Silicon Valley">><<removeclass "#needs" "hide">><<audio "panic" fadeto .5>><<notify 3s>><<audio "ding" play>>@7734 What’s going on? You better get your head on straight. Back to work, 7734<</notify>><</linkreplace>>.</q>@@ 
+
+@@#needs.hide;Who needs you in [[Silicon Valley->10]]?@@
+<</timed>>
+:: 10
+<<audio "panic" fadeout>><div id="HUD"><<include "Case Timer">></div>
+It’s your final case for the day.
+
+Another video. It’s grainy, shot in low light. It’s in landscape mode. You don’t see that often. It shows <<linkappend "unspeakable wickedness">>—literally, you’ll never speak about what you see. <<linkreplace "You can’t">>You can’t<<removeclass "#thoughts" "hide">><<removeclass "#approve" "hide">><</linkreplace>><</linkappend>>.
+
+@@#thoughts.hide;color:gray;(You’re afraid to sleep. The images you see when you close your eyes. Last night you stood in the shower until the water ran cold, and stood there still longer. Shivering in the icy torment.)@@
+
+@@#approve.hide;
+Something in the video whines, high-pitched and grating. It abruptly stops.
+
+Approve or Block this post?
+<<link "Approve">><<set $approved to $approved +1>><<set $horror to true>><<set $cases to $cases +1>><<goto "11">><</link>>
+<<link "Block">><<set $blocked to $blocked +1>><<set $cases to $cases +1>><<goto "11">><</link>>
+@@
+
+<<timed 25s>><<set $unreviewed to $unreviewed +1>><<goto "11">><</timed>>
+
+:: 11
+
+<<goto "Shift Over">>
+
+:: Shift Over
+<div id="HUD"><span class="caseTimer"><<audio "ending" loop play>>The shift is over.
+You screened $cases cases today.</span></div>
+Thank you for completing another shift at ViralTitans, Inc. @CM7734, you are an indispensable member of our Enforcement team. To support your dream of becoming the best Content Moderator possible, ViralTitans provides feedback to you.  
+* You blocked $blocked out of the last 10 cases.
+* You approved $approved out of the last 10 cases.
+* You failed to review $unreviewed <<if $unreviewed is 1>>case<<else>>cases<</if>>.
+<<linkreplace "Rerun Simulation">><<audio "ending" fadeout>>@@.blink;Reloading Simulation@@<<timed 5s>><<run Engine.restart()>><</timed>><</linkreplace>>
+
+@@color:gray;(This feedback is a hollow measure of your impact, you know that. A shadow. There must be some way to know the dark reach of your ghostly power, a [[secret score]].)@@
+
+:: secret score [gray]
+<div id="HUD"><span class="caseTimer">Your Secret Power.<br>Your Secret.</span></div>
+\
+Your power grew this shift.
+* <<if $karen>>You gave a pass to sexism.<<else>>You stole an opportunity from others to call out sexism.<</if>>
+* <<if $facialrec>>You abetted the police state.<<else>>You angered free speech hardliners.<</if>>
+* <<if $selfharm>>You exposed dozens to suicideation.<<else>>You disempowered a young man who already felt powerless.<</if>>
+* <<if $celebrity>>You supported rape culture.<<else>>You feed the sexual resentment of an entitled man.<</if>>
+* <<if $abuse>>You let child abuse carry on unabated.<<else>>You sent people scurrying onto the dark web.<</if>>
+* <<if $police>>You exploited a black body.<<else>>You covered up police brutality.<</if>>
+* <<if $grocery>>You ignored racism and let it run wild online.<<else>>You bolstered somebody’s privilege by hiding racism from them.<</if>>
+Your power grew, yes. Merciless and malignant. You’re only the channel though, a medium. It’s time, you decide, to <<linkappend "dam the channel">>. To damn the medium<<removeclass "#sim" "hide">><</linkappend>>. 
+
+@@#sim.hide;<<linkreplace "Rerun Simulation">><<audio "ending" fadeout>>@@.blink;Reloading Simulation@@<<timed 5s>><<run Engine.restart()>><</timed>><</linkreplace>>
+[[About->Post-About]]@@
+

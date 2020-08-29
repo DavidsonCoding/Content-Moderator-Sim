@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather+Sans&display=swap');
+
+body {
+	background-color: white;
+	color: black;
+	/* font-size: 1.25rem; */
+	/* line-height: 1.875rem; */
+}
+
+a {
+	color: #3b5998;
+	font-weight: bold;
+}
+
+a:hover {
+	color: #8b9dc3;
+	font-weight: bold;
+	text-decoration: underline;
+}
+
+
+h1 {
+  background: #3b5998;
+  color: white;
+  padding: 20px;
+  border-radius: 20px;
+  text-align: center;
+}
+
+h2, h3 {
+	text-align: center;
+}
+
+body.gray .passage {
+	color: gray
+}
+
+.passage {
+	font-family: 'Merriweather Sans', sans-serif;
+}
+
+#HUD {
+	background: #3b5998;
+	padding: 20px;
+	color: white;
+	border-radius: 20px;
+}
+
+.caseTimer {
+
+}
+
+
+.chapel-meter {
+	border-radius: 4px;
+	margin-top: 2px;
+}
+
+.hide {
+  display: none;
+}
+
+/* Blink for Webkit and others
+(Chrome, Safari, Firefox, IE, ...)
+*/
+
+@-webkit-keyframes blinker {
+  from {opacity: 1.0;}
+  to {opacity: 0.0;}
+}
+
+.blink{
+	text-decoration: blink;
+	-webkit-animation-name: blinker;
+	-webkit-animation-duration: 0.7s;
+	-webkit-animation-iteration-count:infinite;
+	-webkit-animation-timing-function:ease-in-out;
+	-webkit-animation-direction: alternate;
+}
+
+span.avoidwrap { display:inline-block; }
+
+
+html[data-debug-view] .debug {
+  /* background-color: #234; */
+  background-color: #2fcb7b;
+}
+
+
+html[data-debug-view] .debug.hidden, html[data-debug-view] .debug.hidden .debug {
+  /* background-color: #555; */
+  background-color: #5555554f;
+}
+
+
+.error-view {
+  /* background-color: #511; */
+  background-color: #55111161;
+}
+
+
+#debug-bar-watch {
+  /* background-color: #222; */
+  background-color: #2220;
+}
+
+
+/* notify.min.css, by chapel; for use with notify.js; v1.0.0 */
+#notify{border-radius:5px 0px 0px 5px;position:fixed;display:block;width:16em;right:-20em;top:2em;padding:.5em;background-color:#898F9C;color:#fff;-webkit-transition:right .3s;-moz-transition:right .3s;-o-transition:right .3s;transition:right .3s}#notify.open{right:0}
+

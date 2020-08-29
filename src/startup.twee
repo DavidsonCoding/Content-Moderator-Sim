@@ -1,0 +1,90 @@
+:: StoryTitle
+Content Moderation Sim
+
+:: StoryData
+{
+	"ifid": "A6FC602C-9B78-4205-9E35-DBC47BA31B15",
+	"format": "SugarCube",
+	"format-version": "2.31.1",
+	"start": "Start",
+	"zoom": 1
+}
+
+:: StoryInit {"position":"788,559.8000030517578","size":"100,100"}
+<<newmeter 'timer1' 0>>
+    <<colors '#900' '#898F9C'>>
+    <<animation 40s linear>>
+<</newmeter>>
+
+<<newmeter 'timer2' 0>>
+    <<colors '#900' '#898F9C'>>
+    <<animation 25s linear>>
+<</newmeter>>
+
+<<newmeter 'timer3' 0>>
+    <<colors '#900' '#898F9C'>>
+    <<animation 25s linear>>
+<</newmeter>>
+
+<<newmeter 'timer4' 0>>
+    <<colors '#900' '#898F9C'>>
+    <<animation 25s linear>>
+<</newmeter>>
+
+<<newmeter 'timer5' 0>>
+    <<colors '#900' '#898F9C'>>
+    <<animation 25s linear>>
+<</newmeter>>
+
+<<newmeter 'timer6' 0>>
+    <<colors '#900' '#898F9C'>>
+    <<animation 25s linear>>
+<</newmeter>>
+
+<<newmeter 'timer7' 0>>
+    <<colors '#900' '#898F9C'>>
+    <<animation 25s linear>>
+<</newmeter>>
+
+<<newmeter 'timer8' 0>>
+    <<colors '#900' '#898F9C'>>
+    <<animation 25s linear>>
+<</newmeter>>
+
+<<newmeter 'timer9' 0>>
+    <<colors '#900' '#898F9C'>>
+    <<animation 25s linear>>
+<</newmeter>>
+
+<<newmeter 'timer10' 0>>
+    <<colors '#900' '#898F9C'>>
+    <<animation 25s linear>>
+<</newmeter>>
+
+<<cacheaudio "ding" "audio/ding.mp3" "audio/ding.ogg">>
+<<cacheaudio "noise" "audio/whitenoise.mp3" "audio/whitenoise.ogg">>
+<<cacheaudio "panic" "audio/breathing.mp3" "audio/breathing.ogg">>
+<<cacheaudio "ending" "audio/kaleetan.mp3" "audio/kaleetan.ogg">>
+<<waitforaudio>>
+
+<<set $blocked to 0>>
+<<set $approved to 0>>
+<<set $timer to "timer1">>
+<<set $cases to random(701,1251)>>
+<<set $place to either("Valley", "Bay area")>>
+<<set $unreviewed to 0>>
+<<set $karen to false>>
+<<set $facialrec to false>>
+<<set $selfharm to false>>
+<<set $celebrity to false>>
+<<set $abuse to false>>
+<<set $police to false>>
+<<set $grocery to false>>
+<<set $horror to false>>
+
+
+:: Case Timer
+<span class="caseTimer">You have screened $cases cases today.
+Time Remaining to Review this Case: 
+<<showmeter `$timer` 1>></span>
+

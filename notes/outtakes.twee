@@ -1,0 +1,14 @@
+Another case of <<linkappend "black face">>, not even college kids this time. Some adult party<</linkappend>>. <<linkreplace "User Generated Content">>UGC<</linkreplace>> The dead should stay dead. This gif though undoes and does the horror. Something about the Enforcement Team.
+
+
+:: PassageFooter
+	<<if not tags().includes("noFooter")>>\
+		<<if $blocked is 2>>
+				<<notify>>@CM4377 u r blocking too much content<<audio "ding" play>><</notify>>
+		<<else>>
+			<<set $nag to either("3.5s", "5s", "6.5s")>>
+				<<timed $nag>>
+				<<notify>><<print $message.pluck()>><<audio "ding" play>><</notify>>
+			<</timed>>
+	\<</if>>
+	\<</if>>

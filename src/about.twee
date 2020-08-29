@@ -1,0 +1,48 @@
+:: Start
+!Content Moderator Sim
+!!@@.avoidwrap;A Workplace@@ @@.avoidwrap;Horror Game@@
+!!!by Mark Sample
+It’s close to the end of an <<linkreplace "8 hour shift">><<notify 4s>><<audio "ding" play>>@CM4377 Back to work!!!<</notify>><<timed 2s>><<removeclass "#menu" "hide">><</timed>>8 hour shift<</linkreplace>> at ViralTitans, Inc., the third largest online content moderation subcontractor in the $place. 
+
+@@#menu.hide;[[Back to Work->1]]
+[[Content Warning]]
+[[About]]
+@@
+
+:: About
+!About Content Moderator Sim
+\
+<<include "Credits">>
+<<link "Back to Work">><<goto "Visited Start">><<notify 4s>><<audio "ding" play>>@CM4377 Break is over!! Back to your queue STAT<</notify>><</link>>
+
+:: Visited Start
+!Content Moderation Sim
+!!A Workplace Horror Game by Mark Sample
+It’s close to the end of an 8 hour shift at ViralTitans, Inc., the third largest online content moderation subcontractor in the $place. 
+
+[[Back to Work->1]]
+[[Content Warning]]
+[[About]]
+
+:: Content Warning
+!Content Moderator Warning
+
+<<link "Back to Work">><<goto "Visited Start">><<notify 3s>><<audio "ding" play>>@CM4377 Of course there's horrific content. That's what you're paid to watch.<</notify>><</link>>
+
+Brief written references to abuse, self-harm, racism, and brutality, but no images or video.
+
+:: Credits
+!!Credits
+* This game is informed by Sara Roberts’ ethnographic research into online content moderation. Check out this //New Yorker// [[interview with Roberts->https://www.newyorker.com/news/q-and-a/the-underworld-of-online-content-moderation]] for more background. Real world content moderation system are more complicated than what is presented in this simulation. Roberts provides greater detail in her book //[[Behind the Screen->https://yalebooks.yale.edu/book/9780300235883/behind-screen]]// (2019).
+* Many of the <q>cases</q> are derived from real examples detailed in this //Guardian// report on [[content moderation at Facebook->https://www.theguardian.com/news/2017/may/21/revealed-facebook-internal-rulebook-sex-terrorism-violence]].  
+* Custom Twine macros courtesy of [[Chapel->https://twinelab.net/custom-macros-for-sugarcube-2/#/]].
+* [[Ears ringing->https://freesound.org/people/hykenfreak/sounds/218050/]] and [[panicked breathing->https://freesound.org/people/giddster/sounds/336530/]] audio clips from Freesound
+* The closing song is <q>The Temperature of the Air on the Bow of the Kaleetan</q> by [[Chris Zabriskie->https://chriszabriskie.bandcamp.com/album/undercover-vampire-policeman]]
+* Cover [[thumb up image->https://thenounproject.com/icon/1939579/]] courtesy of the Noun Project
+* Written and designed by [[Mark Sample->https://www.samplereality.com]] in Twine
+
+:: Post-About
+!About Content Moderator Sim
+<<include "Credits">>
+<<linkreplace "Rerun Simulation">><<audio "ending" fadeout>>@@.blink;Reloading Simulation@@<<timed 5s>><<run Engine.restart()>><</timed>><</linkreplace>>
+
