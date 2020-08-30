@@ -1,4 +1,4 @@
-# Content-Moderator-Sim
+# Content Moderator Sim
 
 Made in Twine/Sugarcube by Mark Sample
 
